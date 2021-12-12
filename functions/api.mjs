@@ -27,7 +27,7 @@ router.get("/prices", async (req, res) => {
         return {
           title: e.title,
           name: e.source_display_name,
-          price: e.source_display_name,
+          price: e.source_price,
           image: e.image,
         };
       })
