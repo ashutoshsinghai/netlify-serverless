@@ -1,11 +1,16 @@
-const express = require("express");
+import express from "express";
+import router from "./router.js";
 
 const app = express();
 
-app.use("/.netlify/functions/api", require("./router.js"));
+app.use("/.netlify/functions/api", router);
 
 app.get("*", function (req, res) {
   res.send("No handler found for - " + req.path);
 });
 
-module.exports = app;
+if (process.argv[2] === "local") {
+  app.listen(9000);
+}
+
+export default app;
