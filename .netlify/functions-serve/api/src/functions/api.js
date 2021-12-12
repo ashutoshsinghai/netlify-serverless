@@ -25297,7 +25297,7 @@ var require_serverless_http = __commonJS({
   }
 });
 
-// functions/api.js
+// functions/api.mjs
 var import_express = __toModule(require_express2());
 
 // node_modules/node-fetch/src/index.js
@@ -26399,12 +26399,12 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
   });
 }
 
-// functions/api.js
+// functions/api.mjs
 var app = (0, import_express.default)();
 var router = import_express.default.Router();
 app.use("/.netlify/functions/api", router);
 router.get("/", (req, res) => {
-  res.json({ name: "Ashutosh" });
+  res.json({ name: "Ashutosh Singhai" });
 });
 router.get("/suggestions", async (req, res) => {
   const { search, size = 10, page = 1 } = req.query;

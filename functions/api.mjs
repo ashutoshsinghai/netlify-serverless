@@ -6,7 +6,7 @@ import fetch from "node-fetch";
 app.use("/.netlify/functions/api", router);
 
 router.get("/", (req, res) => {
-  res.json({ name: "Ashutosh" });
+  res.json({ name: "Ashutosh Singhai" });
 });
 
 router.get("/suggestions", async (req, res) => {
