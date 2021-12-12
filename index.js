@@ -2,8 +2,10 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("This is root ! Welcome here");
+app.use(".netlify/functions/api", require("./router"));
+
+app.get("*", function (req, res) {
+  res.send("Hello world : Error - link - " + req.path);
 });
 
 module.exports = app;
