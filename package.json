@@ -10,9 +10,13 @@
     "serverless-http": "^2.7.0"
   },
   "type": "module",
-  "devDependencies": {},
+  "devDependencies": {
+    "netlify-cli": "^8.0.20"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "netlify dev",
+    "deploy": "netlify build && netlify deploy"
   },
   "repository": {
     "type": "git",
